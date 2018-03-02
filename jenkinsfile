@@ -7,11 +7,6 @@ node('master') {
     stage('package'){
         sh 'mvn package'
     }
-    stage('archive'){
-        archiveArtifacts 'gameoflife-web/target/*.war'
-    }
-    stage('junit'){
-        junit 'gameoflife-web/target/surefire-reports/*.xml'
-    }
-        
+    
+       
 }
